@@ -11,6 +11,7 @@ function createNote(posX, posY, color)
     note.style.transform = "translateX(" + posX +"px) translateY("+ posY +"px)";
 
     bar.className = "bar";
+    bar.innerHTML = '<button id="btn-remove" class="icon-trash-empty"></button>';
     bar.style.backgroundColor = color;
 
     body.innerHTML = "write some text here!";
@@ -19,6 +20,16 @@ function createNote(posX, posY, color)
     note.appendChild(body);
 
     document.body.appendChild(note);
+    
+    var btnRemove = document.querySelector("#btn-remove");
+    btnRemove.addEventListener("click", removeNote);
+}
+
+function removeNote()
+{
+    var item = this.parentNode.parentNode;
+
+    document.body.removeChild(item);
 }
 
 function getRandomColor()

@@ -9,31 +9,19 @@
     {
       "uid": "70370693ada58ef0a60fa0984fe8d52a",
       "css": "plus",
-      "code": 59392,
+      "code": 59396,
       "src": "entypo"
+    },
+    {
+      "uid": "f48ae54adfb27d8ada53d0fd9e34ee10",
+      "css": "trash-empty",
+      "code": 59393,
+      "src": "fontawesome"
     },
     {
       "uid": "b9ca73befd583b2197a56a68045c9c0c",
       "css": "sticky-note-o",
       "code": 62026,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "c116c18983825a9b32a23a62fd18e1e6",
-      "css": "sticky-note",
-      "code": 62025,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "f4445feb55521283572ee88bc304f928",
-      "css": "floppy",
-      "code": 59393,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "5211af474d3a9848f67f945e2ccaf143",
-      "css": "cancel",
-      "code": 59394,
       "src": "fontawesome"
     }
   ]
