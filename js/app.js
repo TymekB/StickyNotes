@@ -20,7 +20,7 @@ function createNote(posX, posY, color)
     note.appendChild(body);
 
     document.body.appendChild(note);
-    
+
     var btnRemove = document.querySelector("#btn-remove");
     btnRemove.addEventListener("click", removeNote);
 }
@@ -40,7 +40,20 @@ function getRandomColor()
     return colors[ random ];
 }
 
+function getRandomCoords()
+{
+    var posY =  Math.floor(Math.random()*700);
+    var posX =  Math.floor(Math.random()*700);
+
+    return {
+        top: posY,
+        left: posX
+    }
+}
+
 btnCreate.addEventListener('click', function()
 {
-    createNote(50, 50, getRandomColor());
+    var randomCoords = getRandomCoords();
+
+    createNote(randomCoords.left, randomCoords.top,  getRandomColor());
 });
