@@ -23,6 +23,7 @@ function createNote(posX, posY, color)
 
     var btnRemove = document.querySelector("#btn-remove");
     btnRemove.addEventListener("click", removeNote);
+    note.addEventListener("mousedown", onDragStart);
 }
 
 function removeNote()
@@ -42,8 +43,8 @@ function getRandomColor()
 
 function getRandomCoords()
 {
-    var posY =  Math.floor(Math.random()*700);
-    var posX =  Math.floor(Math.random()*700);
+    var posY =  Math.floor(Math.random() * 700);
+    var posX =  Math.floor(Math.random() * 700);
 
     return {
         top: posY,
