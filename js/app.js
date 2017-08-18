@@ -21,7 +21,15 @@ function createNote(posX, posY, color)
     document.body.appendChild(note);
 }
 
+function getRandomColor()
+{
+    var colors = ['#ba4343', '#43ba7a', '#43baa4', '#439aba', '#437aba'];
+    var random = Math.floor( Math.random() * colors.length );
+
+    return colors[ random ];
+}
+
 btnCreate.addEventListener('click', function()
 {
-    createNote(50, 50, '#ba4343');
+    createNote(50, 50, getRandomColor());
 });
