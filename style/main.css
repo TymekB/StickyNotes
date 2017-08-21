@@ -67,6 +67,7 @@ header > p
     box-shadow: 3px 3px 30px -16px rgba(0,0,0,0.75);
 }
 
+
 #btn-create
 {
     position: absolute;
@@ -89,14 +90,14 @@ header > p
     color: #ccc;
 }
 
-#btn-remove
+.btn-remove
 {
     background: transparent;
     border: none;
     font-size: 15px;
 }
 
-#btn-remove:hover
+.btn-remove:hover
 {
     cursor: pointer;
     color: #fff;

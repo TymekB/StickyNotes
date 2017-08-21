@@ -4,6 +4,8 @@ var diffY;
 
 function onDragStart(ev)
 {
+    if(ev.target.className.indexOf('bar') === -1) return;
+
     draggedElement = this;
     var boundingClientRect = draggedElement.getBoundingClientRect();
 

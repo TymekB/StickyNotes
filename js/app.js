@@ -11,7 +11,7 @@ function createNote(posX, posY, color)
     note.style.transform = "translateX(" + posX +"px) translateY("+ posY +"px)";
 
     bar.className = "bar";
-    bar.innerHTML = '<button id="btn-remove" class="icon-trash-empty"></button>';
+    bar.innerHTML = '<button class="btn-remove icon-trash-empty"></button>';
     bar.style.backgroundColor = color;
 
     body.innerHTML = "write some text here!";
@@ -21,8 +21,13 @@ function createNote(posX, posY, color)
 
     document.body.appendChild(note);
 
-    var btnRemove = document.querySelector("#btn-remove");
-    btnRemove.addEventListener("click", removeNote);
+    var btnRemove = document.querySelectorAll(".btn-remove");
+
+    for(var i = 0; i < btnRemove.length; i++)
+    {
+        btnRemove[i].addEventListener("click", removeNote);
+    }
+
     note.addEventListener("mousedown", onDragStart);
 }
 
@@ -58,3 +63,4 @@ btnCreate.addEventListener('click', function()
 
     createNote(randomCoords.left, randomCoords.top,  getRandomColor());
 });
+
